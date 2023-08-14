@@ -1,0 +1,87 @@
+.cover-contact-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.title-contact-list{
+    font-size: xx-large;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.table-cover-contact-list{
+
+}
+
+.table-contact-list{
+
+}
+
+.table-head-contact-list{
+
+}
+
+.table-head-contact-list > tr> th{
+    padding: 6px;   
+}
+
+.table-body-contact-list{
+
+}
+
+.table-row-contact-list{
+
+}
+
+.table-row-contact-list > td{
+    padding: 6px;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+
+.remove{
+    background-color: red !important;
+}
+
+.cover2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.buttonStyleAdd{
+    background-color: green;
+    font-size: x-large;
+    margin-left: 52px;
+    padding: 5px;
+    color: white;
+    font-style: inherit;
+    border-radius: 5px;
+}
+
+.cancel{
+    background-color: red !important;
+}
+
+.FormInput{
+    padding: 3px;
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+}
+
+label{
+    padding: 5px;
+    font-weight: 600;
+}
+input{
+    padding: 3px;
+}
