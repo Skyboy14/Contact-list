@@ -3,6 +3,7 @@ import { updateServiceCall } from "../API/Services";
 
 function UpdateContactForm({ id, originalArr, setOriginalArr, close, setLoading }) {
     
+    // filter with help of id and get the existing data to update
     const updatedItem = id && originalArr.find(item => item.id === id);
 
     const [inputData, setInputData] = useState({
@@ -12,6 +13,7 @@ function UpdateContactForm({ id, originalArr, setOriginalArr, close, setLoading 
             id: updatedItem.id,
     })
 
+    // update call, to update the existing conatct changes
     const handleSubmit = (event) => {
         event.preventDefault();
         updateServiceCall( id, inputData, originalArr, setOriginalArr, setLoading )

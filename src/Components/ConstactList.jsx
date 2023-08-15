@@ -12,15 +12,19 @@ function ContactList() {
     const [editId, setEditId] = useState(null)
     const [loading, setLoading] = useState(false);
 
+    // contacts will be fetch one page is loaded only once
     useState(() => {
         getAllUsers(setArrayItem, setLoading)
     }, [])
 
+    // table to display contact
     return (
       <div className="cover-contact-list">
         <div className="title-contact-list">
             Contact List
             </div>
+
+            {/* while loading we will show spinner */}
             {loading ? 
                 <SpinLoader loading={loading} />
             :
@@ -59,11 +63,13 @@ function ContactList() {
                                     {item.email}
                                 </td>
                                 <td className="remove">
+                                    {/* Delete call, to delet the contact  */}
                                     <button onClick={(e)=>deleteServiceCall(item.id, arrayItem, setArrayItem, setLoading)}>
                                         Remove
                                     </button>  
                                 </td>
                                 <td className="remove">
+                                    {/* Edit call, to edit the details of existing contact  */}
                                     <button onClick={(e) => { setShowEditContact(true);  setEditId(item.id)}}>
                                         Edit
                                     </button>  
@@ -74,7 +80,8 @@ function ContactList() {
                     </table>
                 </div>
             
-                <div style={{ marginLeft: '85px' }}>
+                    <div style={{ marginLeft: '85px' }}>
+                        {/* Show Add contct Field  */}
                     {!showEditContact &&
                         <>
                         {!showAddContact  && <button className="buttonStyleAdd" onClick={(event) => setShowAddContact(true)}>
@@ -85,12 +92,13 @@ function ContactList() {
                             Cancel
                         </button>
                         }
+                        {/* Add contact component  */}    
                         {
-                                showAddContact &&
-                                <AddContactForm
-                                    setOriginalArr={setArrayItem}
-                                    setLoading={setLoading}
-                                />
+                            showAddContact &&                               
+                            <AddContactForm
+                                setOriginalArr={setArrayItem}
+                                setLoading={setLoading}
+                            />
                         }
                     
                     </>
@@ -99,6 +107,7 @@ function ContactList() {
                         Cancel Edit
                     </button>
                     }
+                        {/* Edit contact component  */}
                     {
                             showEditContact &&
                             <UpdateContactForm

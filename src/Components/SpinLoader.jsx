@@ -4,7 +4,7 @@ import '../StyleSheets/Loader.css'
 
 export default function SpinLoader({loading}) {
 
-    
+    // spinner to show when data is fetching 
     return (
         <div className="loader-cover">
             <ClipLoader

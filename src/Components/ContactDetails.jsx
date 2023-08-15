@@ -9,12 +9,14 @@ function AddContactForm({ setOriginalArr, setLoading }) {
             id: '',
         })
 
+    // post call, to add new contact to list
     const handleSubmit = (event) => {
         event.preventDefault();
         postServiceCall(inputData, setOriginalArr, setLoading)
         clearInput()
     };
     
+    // clear field once the data is submitted
     const clearInput = (event) => {
         setInputData({
             name: '',
@@ -24,6 +26,7 @@ function AddContactForm({ setOriginalArr, setLoading }) {
         });
     }
     
+    // handle the input change
     const handleInputChange = (event) => {
         event.preventDefault()
         const { name, value } = event.target;
