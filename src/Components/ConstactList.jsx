@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { deleteServiceCall, getAllUsers } from "../API/Services";
 import '../StyleSheets/ContactList.css'
 import AddContactForm from "./ContactDetails";
@@ -13,7 +13,7 @@ function ContactList() {
     const [loading, setLoading] = useState(false);
 
     // contacts will be fetch one page is loaded only once
-    useState(() => {
+    useEffect(() => {
         getAllUsers(setArrayItem, setLoading)
     }, [])
 
