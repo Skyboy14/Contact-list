@@ -2,7 +2,7 @@
 We have created a contact list app using react JS and libs such as Axios and react-spinner.
 API services GET, POST, PUT and DELETE Data as you requested.
 
-# hosted:
+### hosted:
 https://skyboy14.github.io/Contact-list/
 
 The project is well structured and comments guide you through the code.
